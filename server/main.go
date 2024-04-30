@@ -1,12 +1,12 @@
 package main
 
 import (
-    "context"
-    "log"
-    "net"
+	"context"
+	"log"
+	"net"
 
-    "github.com/gattyan27/go-next/proto"
-    "google.golang.org/grpc"
+	"github.com/gattyan27/go-next/server/project"
+	"google.golang.org/grpc"
 )
 
 type server struct {
