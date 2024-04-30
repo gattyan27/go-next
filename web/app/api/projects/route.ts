@@ -14,7 +14,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 
 const grpcObject = grpc.loadPackageDefinition(packageDefinition) as any
 const client = new grpcObject.project.ProjectService(
-  "localhost:50051",
+  "server:50051",
   grpc.credentials.createInsecure()
 )
 
