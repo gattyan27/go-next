@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/gattyan27/go-next/server/project"
+	"github.com/gattyan27/go-next/server/proto/project"
 	"google.golang.org/grpc"
 )
 
@@ -16,7 +16,7 @@ type server struct {
 func (s *server) ListProjects(ctx context.Context, req *project.ListProjectsRequest) (*project.ListProjectsResponse, error) {
     // TODO: データベースから案件情報を取得する処理を実装
     projects := []*project.Project{
-        {Id: 1, Name: "【PHP】フルスタックエンジニア募集！", Description: "PHPでの開発経験がある方、ぜひご応募ください！"},
+        {Id: 1, Name: "hogehoge", Description: "PHPでの開発経験がある方、ぜひご応募ください！"},
         {Id: 2, Name: "【Ruby】大規模開発に参画してくださるエンジニア募集！", Description: "Ruby on Railsでの開発経験がある方、ぜひご応募ください！"},
     }
     return &project.ListProjectsResponse{Projects: projects}, nil
