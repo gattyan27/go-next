@@ -1,15 +1,15 @@
 version: "3"
 services:
-  web:
-    build:
-      context: ./web
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    depends_on:
-      - server
-    volumes:
-      - ./server:/app/server
+  # web:
+  #   build:
+  #     context: ./web
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - server
+  #   volumes:
+  #     - ./server:/app/server
 
   server:
     build:
@@ -17,3 +17,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "50051:50051"
+    volumes:
+      - ./server:/app
+    command:
+      - air

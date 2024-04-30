@@ -19,6 +19,8 @@ const Home = () => {
       .catch((err) => console.error(err))
   }, [])
 
+  console.log(projects)
+
   return (
     <div>
       <h1>Projects</h1>

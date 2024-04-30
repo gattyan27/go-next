@@ -1,4 +1,3 @@
-// app/api/projects/route.ts
 import * as grpc from "@grpc/grpc-js"
 import * as protoLoader from "@grpc/proto-loader"
 import { NextResponse } from "next/server"
@@ -11,11 +10,10 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
   enums: String,
   defaults: true,
   oneofs: true,
-})
+}) as protoLoader.PackageDefinition
 
-const projectProto = grpc.loadPackageDefinition(packageDefinition).project
-
-const client = new projectProto.ProjectService(
+const grpcObject = grpc.loadPackageDefinition(packageDefinition) as any
+const client = new grpcObject.project.ProjectService(
   "localhost:50051",
   grpc.credentials.createInsecure()
 )
