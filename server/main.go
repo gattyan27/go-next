@@ -5,7 +5,7 @@ import (
     "log"
     "net"
 
-    "github.com/yourusername/yourproject/project"
+    "github.com/gattyan27/go-next/proto"
     "google.golang.org/grpc"
 )
 
