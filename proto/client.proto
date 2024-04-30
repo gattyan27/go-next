@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package client;
+
+option go_package = "github.com/gattyan27/go-next/server/pkg/grpc/client";
+
+message Client {
+  int64 id = 1;
+  string company_name = 2;
+  string address = 3;
+}

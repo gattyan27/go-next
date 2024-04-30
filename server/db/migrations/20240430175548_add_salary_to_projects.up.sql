@@ -1,0 +1,1 @@
+ALTER TABLE projects ADD COLUMN salary VARCHAR(255);

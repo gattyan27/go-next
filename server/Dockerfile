@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y protobuf-compiler && \
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 RUN go install github.com/cosmtrek/air@latest
+RUN go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 
 WORKDIR /app
 
